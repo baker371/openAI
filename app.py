@@ -24,7 +24,7 @@ st.set_page_config(page_title="Query Executor", page_icon=":robot:")
 # Function to create SQL agent
 def create_sql_agent_executor():
     return create_sql_agent(
-        llm=ChatOpenAI(temperature=0, model="gpt-4"),
+        llm=ChatOpenAI(temperature=0, model="GPT-3.5 Turbo"),
         toolkit=SQLDatabaseToolkit(
             db=SQLDatabase.from_uri("postgresql://username:password@server:port2/database"),
             llm=OpenAI(temperature=0)
